@@ -5,12 +5,7 @@ Bryan Caldera
 
 Questions
 1. I worked on this alone. 
-2. Describe in detail the steps you used to complete the assignment. Consider your reader to be someone
-skilled in software development but otherwise unfamiliar with the assignment. Good answers to this
-question will be recipes that someone can follow to reproduce your development steps.
-Note: I may decide to follow these instructions for random assignments, so you should make sure
-they are accurate
-This project checks various MSRs in Intel processors to find vmx capability support. The program will run as a kernel module and tell the user if the controll can be set or cleared. To complete this assignment I first started by using the cmpe283-1.c and Makefile provided for this assignment. My next step was finding all the MSR addresses for Entry / Exit / Procbased / Secondary Procbased / Tertiary Procbased / Pinbased controls. I did not include Tertiary Procbased capabilities in my test as my CPU did not support it, the check is in the code just commented out. After this I copied the bit positions and command pairs from the Intel SDM, and wrote them into my capability_info structs. Then, I added code to check all the MSRs. To test this code I created an Ubuntu Virtual Machine using VMWARE on my Intel based Mac with nested virtualization enabled. I then used the following steps to run this C file and check for vmx capabilities. 
+2. This project checks various MSRs in Intel processors to find vmx capability support. The program will run as a kernel module and tell the user if the controll can be set or cleared. To complete this assignment I first started by using the cmpe283-1.c and Makefile provided for this assignment. My next step was finding all the MSR addresses for Entry / Exit / Procbased / Secondary Procbased / Tertiary Procbased / Pinbased controls. I did not include Tertiary Procbased capabilities in my test as my CPU did not support it, the check is in the code just commented out. After this I copied the bit positions and command pairs from the Intel SDM, and wrote them into my capability_info structs. Then, I added code to check all the MSRs. To test this code I created an Ubuntu Virtual Machine using VMWARE on my Intel based Mac with nested virtualization enabled. I then used the following steps to run this C file and check for vmx capabilities. 
 
 ## Steps
 * Have a Linux VM or Local Linux Machine
