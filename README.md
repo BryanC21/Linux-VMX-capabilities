@@ -3,11 +3,11 @@
 ## Team Members
 Bryan Caldera
 
-Questions
+## Questions
 1. I worked on this alone. 
-2. This project checks various MSRs in Intel processors to find vmx capability support. The program will run as a kernel module and tell the user if the controll can be set or cleared. To complete this assignment I first started by using the cmpe283-1.c and Makefile provided for this assignment. My next step was finding all the MSR addresses for Entry / Exit / Procbased / Secondary Procbased / Tertiary Procbased / Pinbased controls. I did not include Tertiary Procbased capabilities in my test as my CPU did not support it, the check is in the code just commented out. After this I copied the bit positions and command pairs from the Intel SDM, and wrote them into my capability_info structs. Then, I added code to check all the MSRs. To test this code I created an Ubuntu Virtual Machine using VMWARE on my Intel based Mac with nested virtualization enabled. I then used the following steps to run this C file and check for vmx capabilities. 
+2. This project checks various MSRs in Intel processors to find vmx capability support. The program will run as a kernel module and tell the user if the control can be set or cleared. To complete this assignment I first started by using the cmpe283-1.c and Makefile provided for this assignment. My next step was finding all the MSR addresses for Entry / Exit / Procbased / Secondary Procbased / Tertiary Procbased / Pinbased controls. I did not include Tertiary Procbased capabilities in my test as my CPU did not support it, the check is in the code just commented out. After this I copied the bit positions and command pairs from the Intel SDM, and wrote them into my capability_info structs. Then, I added code to check all the MSRs. To test this code I created an Ubuntu Virtual Machine using VMWARE on my Intel based Mac with nested virtualization enabled. I then used the following steps to run this C file and check for vmx capabilities. 
 
-## Steps
+# Steps
 * Have a Linux VM or Local Linux Machine
 
 * Copy the files from the repository to your linux machine
