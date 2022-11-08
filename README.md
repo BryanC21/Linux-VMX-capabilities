@@ -32,7 +32,7 @@ Bryan Caldera
 `sudo dmesg`
 
 ## Output From My Intel Mac
-
+```
 [ 1513.791583] CMPE 283 Assignment 1 Module Start
 [ 1513.791641] 
                Pinbased Controls MSR: 0x3f0000003f
@@ -130,4 +130,4 @@ Bryan Caldera
 [ 1513.791773]   Enable PCONFIG: Can set=No, Can clear=Yes
 [ 1513.791774]   Enable ENCLV exiting: Can set=No, Can clear=Yes
 [ 1521.417231] CMPE 283 Assignment 1 Module Exits
-
+```
