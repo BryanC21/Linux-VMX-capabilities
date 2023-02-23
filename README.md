@@ -1,4 +1,4 @@
-#Checking processor VMX capabilities with C in a Linux environment 
+# Checking processor VMX capabilities with C in a Linux environment 
 
 ### Steps
 * Have a Linux VM or Local Linux Machine
